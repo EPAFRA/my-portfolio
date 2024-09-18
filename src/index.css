@@ -11,3 +11,607 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* src/styles/animations.css */
+
+/* .fade-in {
+  opacity: 0; /* Start as invisible */
+  /* animation: fadeIn 1s forwards;  */
+  /* Apply fadeIn animation */
+/* }  */
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  } */
+/* } */
+
+/* /* src/styles/animations.css */
+
+.slide-up {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: slideUp 1s forwards; /* Apply slideUp animation */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* src/index.css */
+html, body {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:  white;
+  color:#333;
+  padding: 1rem 2rem; /* Padding around the header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center;
+}
+/* src/components/Header.css */
+
+/* General styling for the header */
+header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  width: 100%;
+  background-color: white; /* Background color for the header */
+  color: #333; /* Text color for the header */
+  padding: 1rem 0px; /* Padding around the header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between title and nav */
+  align-items: center; /* Center items vertically */
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+.header-logo {
+  width: 60px; /* Adjust the size of the logo */
+  height: 60px; /* Set a height to maintain aspect ratio */
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  border-radius: 50%; /* Makes the logo circular */
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the logo and the title */
+}
+
+/* Title styling */
+.header-title {
+  font-size: 2rem;
+  color: #333;
+  margin-left: 10px;
+  
+}
+
+/* Navigation styling */
+nav {
+  display: flex; /* Flex layout for nav */
+  /* flex-direction: row; Arrange items in a row */
+  /* justify-content: flex-end; Align nav items to the right */
+  /* align-items: center; Center items vertically */
+}
+
+nav ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  gap: 20px; /* Space between links */
+}
+
+nav ul li {
+  display: inline; /* Inline display for list items */
+}
+
+nav a {
+  color: #333; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size for links */
+  font-weight: bold; /* Bold text for links */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* General section styling */
+section {
+  padding: 0px 0; /* Padding for sections */
+  min-height: 100vh; /* Minimum height to cover the viewport */
+}
+
+
+/* Hero section */
+/* .hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+  background: url('https://via.placeholder.com/1200x800') center center/cover;
+}
+
+.hero-content {
+  color: white;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  /* padding: 20px;
+  border-radius: 10px; */
+  
+/* }
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background-color: #ffdc62;
+  color: #4e73df;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.hero button:hover {
+  background-color: #ffb347; */
+/* }  */
+
+
+/* src/index.css */
+
+/* About Section */
+.about-container {
+  opacity: 0; /* Start as invisible */
+  animation: slideUp 1s forwards; /* Apply slideUp animation */
+  animation-delay: 1s; /* Delay before the animation starts */
+}
+.about-section {
+  padding: 1px 0;
+  background-color: #333;
+  text-align: center;
+  margin-top: 0;
+  opacity: 0; /* Start as invisible */
+  animation: slideUp 1s forwards; /* Apply slideUp animation */
+  animation-delay: 1s;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.about-section h5 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+/* .about-section p {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+} */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skills-list span {
+  background-color: #ffdc62;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #4e73df;
+}
+
+/* src/components/Projects.css */
+
+.projects-section {
+  padding: 10px 0; /* Adjust top and bottom padding */
+  background-color: #333; /* Dark background color for the section */
+  text-align: center; /* Center align text */
+  margin-bottom: 0px;
+}
+.projects-section .intro-text{
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0px;
+}
+.projects-content {
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: slideUp 1s forwards; /* Apply slideUp animation */
+  animation-delay: 1.5s; /* Delay before the animation starts */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  margin-top: 40px; /* Space above the container */
+}
+
+.project-card {
+  background-color: white; /* White background for cards */
+  padding: 20px; /* Padding inside the cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure image doesn't overflow card */
+  margin: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project-card h3 {
+  font-size: 1.5rem; /* Font size for headings */
+  margin: 10px 0; /* Margin above and below heading */
+}
+
+.project-card p {
+  font-size: 1rem; /* Font size for paragraphs */
+  color: #666; /* Color for text */
+}
+
+.project-image {
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.project-link {
+  display: inline-block; /* Inline block for links */
+  margin-top: 10px; /* Space above the link */
+  color: #4e73df; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.project-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+
+/* src/index.css */
+.contact-section {
+  padding: 100px 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.btn {
+  background-color: #4e73df;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3a5bbb;
+}
+.contact-content{
+  opacity: 0; /* Start as invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: slideUp 1s forwards; /* Apply slideUp animation */
+  animation-delay: 2s; /* Delay before the animation starts */
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* src/index.css */
+
+/* Single Image Section */
+.carousel-section {
+  position: relative;
+  max-width: 100%;
+  margin: 50px 0;
+}
+
+.image-container {
+  position: relative;
+}
+
+.single-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.overlay-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+}
+
+/* Skills.css */
+
+.skills-container {
+  padding: 10px;
+  background-color: #fff;
+}
+.skills-container h2 {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.skill.left {
+  flex-direction: row;
+}
+
+.skill.right {
+  flex-direction: row-reverse;
+}
+
+.skill-image {
+  flex: 1;
+  padding: 1rem;
+}
+
+.skill-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skill-description {
+  flex: 2;
+  padding: 1rem;
+}
+
+/* src/components/Card.css */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure image doesn't overflow card */
+  margin: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+/* src/components/About.css */
+.about-section {
+  padding: 2rem;
+}
+
+.about-content {
+  margin-bottom: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-list span {
+  background: #eee;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* src/components/Carousel.css */
+
+.carousel-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Background color of the section */
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the whole container */
+  filter: brightness(0.8); /* Darkens the image for better text visibility */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text on the image */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.overlay-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.overlay-text button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeInUp 2s ease-in-out forwards;
+  transition: background-color 0.3s;
+}
+
+.overlay-text button:hover {
+  background-color: #3c60ba;
+}
+
+/* Fade in and slide up effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
