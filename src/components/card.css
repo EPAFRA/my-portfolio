@@ -1,0 +1,39 @@
+/* Card.css */
+.card {
+    background-color: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    /* overflow: hidden; Prevents overflow of child elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    /* margin: 20px; Space between cards */
+    /* max-width: 300px; Max width for cards */
+    flex: 1 1 300px; /*Responsive flex properties
+    text-align: center; /* Center text */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card-image img {
+    width: 100%; /* Image takes full width of card */
+    height: 100%; /* Fixed height for images */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Font size for card title */
+    color: #333; /* Dark color for contrast */
+    margin: 15px 0 10px; /* Top margin for spacing */
+}
+
+.card-content {
+    padding: 15px; /* Padding inside the card for content */
+}
+
+.card-content p {
+    font-size: 1rem; /* Font size for card description */
+    color: #555; /* Lighter color for description text */
+    line-height: 1.5; /* Line height for readability */
+}

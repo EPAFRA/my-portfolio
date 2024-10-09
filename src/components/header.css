@@ -1,0 +1,132 @@
+/* General Styles */
+.header {
+    top: 0;
+    position: fixed;
+    background-color: black;
+    /* padding: 20px 40px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: auto; /* Pushes nav items to the right */
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  /* Hide navbar when screen is narrow */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none; /* Hide navbar by default */
+      flex-direction: column;
+      background-color: #333;
+      padding: 0px 0;
+      position: absolute;
+      top: 0px; /* Adjust this value to fit under the header */
+      left: 0; /* Make the menu start from the left edge */
+      width: 100%; /* Make the dropdown take up the full width */
+      border-radius: 0;
+      align-items: center; /* Center the menu items */
+    }
+  
+    nav ul.show {
+      display: flex; /* Show navbar when toggled */
+    }
+  
+    .header-content {
+      justify-content: space-between;
+    }
+  
+    .nav-toggle {
+      display: block;
+      background-color: #333;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* Hide menu button on larger screens */
+  .nav-toggle {
+    display: none;
+  }
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block; /* Show the icon */
+    }
+  
+    nav ul {
+      display: none; /* Hide the menu */
+      flex-direction: column;
+      background-color: #333;
+      padding: 20px 0;
+      position: absolute;
+      top: 70px; /* Adjust this value to fit under the header */
+      left: 0;
+      width: 100%; /* Full screen width */
+      border-radius: 0;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    nav ul.show {
+      display: flex; /* Show menu on toggle */
+    }
+  }
+  
+  /* General link styles */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  /* Underline the active link */
+  nav ul li a.active {
+    border-bottom: 2px solid #fff; /* Underline effect */
+    color: #fff; /* Optionally change color */
+  }
+  

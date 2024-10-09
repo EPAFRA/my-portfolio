@@ -2,7 +2,7 @@
 import React from 'react';
 import Skills from './skills';
 import Card from './card'; // Import the Card component
-// import './About.css'; // Import the CSS file for about section styles
+import './about.css'; // Import the CSS file for about section styles
 
 const About = () => {
     return (

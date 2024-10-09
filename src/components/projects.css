@@ -1,0 +1,103 @@
+/* Projects.css */
+.projects-section {
+    /* padding: 80px 0; */
+    background-color: #f4f4f4; /* Soft background color for contrast */
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600; /* Slightly bolder for emphasis */
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto; /* Center intro text */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    padding: 0 20px; /* Padding on sides */
+}
+
+.project-card {
+    background-color: #fff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    /* overflow: hidden; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px; /* Responsive flex properties */
+    max-width: 350px; /* Maximum card width */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Elevate on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+.project-card h3 {
+    font-size: 1.5rem; /* Smaller title size */
+    color: #222; /* Darker text for better readability */
+    margin: 15px 0;
+}
+
+.project-card p {
+    font-size: 1rem; /* Consistent font size */
+    color: #555;
+    line-height: 1.5;
+    padding: 0 15px; /* Side padding for text */
+}
+
+.project-link {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Primary button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500; /* Button text weight */
+}
+
+.project-link:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center align cards */
+    }
+
+    .project-card {
+        max-width: 90%; /* Full width on mobile */
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.projects-section h2,
+.intro-text p {
+    animation: fadeIn 0.8s ease-in-out; /* Fade-in effect */
+}

@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Skills.css"; // Import the CSS file for styles
+import "./skills.css"; // Import the CSS file for styles
 
 const skillsData = [
   {

@@ -1,5 +1,6 @@
 // src/components/Projects.js
 import React from 'react';
+import'./projects.css';
 
 const Projects = () => {
   const projectData = [

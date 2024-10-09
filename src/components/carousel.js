@@ -1,5 +1,6 @@
 // src/components/SingleImageWithText.js
 import React from 'react';
+import './carousel.css';
 
 const Carousel = () => {
   return (
